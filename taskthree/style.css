@@ -1,6 +1,6 @@
 .form {
     margin: auto;
-    width: 15%;
+    width: 25%;
     border: 3px solid;
     padding: 10px;
     text-align: center;
@@ -11,4 +11,9 @@
 .inner {
     background: #c5fffd;
     border-radius: 20px;
+}
+
+.error {
+    color: #c42820;
+    font-size: 12px;
 }

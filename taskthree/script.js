@@ -2,39 +2,26 @@
  * Created by Peter Nedelchev <peter.krasimirov@gmail.com>.
  */
 
-function validator() {
-    var firstName = document.forms["myForm"]["firstname"].value;
-    var lastName = document.forms["myForm"]["lastname"].value;
-    var egn = document.forms["myForm"]["egn"].value;
-    var age = document.forms["myForm"]["age"].value;
-    var address = document.forms["myForm"]["address"].value;
-    var password = document.forms["myForm"]["password"].value;
-    var confirmedPass = document.forms["myForm"]["passconfirm"].value;
-    var passRegEx = new RegExp("[a-z][0-9]{6-18}");
-    if (firstName.length < 1 || firstName.length > 15) {
-        alert("First name should be between 1 and 15 symbols");
-        return false;
+function validator(form) {
+    validate(/^[a-zA-z]{1,15}/, form.firstname.value, 'firstname_alert', 'Bad name');
+    validate(/^[a-zA-z]{1,15}/, form.lastname.value, 'lastname_alert', 'Bad name');
+    validate(/\d{10}/, form.egn.value, 'egn_alert', 'Egn is exact 10 digits');
+    if(form.age.value < 18 || 118 > form.age.value) {
+        document.getElementById("age_alert").innerHTML = "Incorrect age";
+        return;
     }
-    if (lastName.length < 1 || lastName.length > 15) {
-        alert("Last name should be between 1 and 15 symbols");
-        return false;
+    validate(/^[a-zA-z0-9]{1,100}/, form.address.value, 'address_alert', 'Address ');
+    validate(/^([a-zA-z0-9]{6,18})$/, form.password.value, 'password_alert', 'Only letters and digits');
+    if (password != confirmedPass) {
+        document.getElementById("passconf_alert").innerHTML = "Password doesn't match";
+        return;
     }
-    if (egn.length != 10) {
-        alert("EGN should be exactly 10 symbols");
-        return false;
-    }
-    if (age < 18 || age >118) {
-        alert("Age should be between 18 and 118");
-        return false;
-    }
-    // if () {
-    //     alert("Address should be between 1 and 100 symbols");
-    //     return false;
-    // }
-    if ( password.match(passRegEx)) {
-        alert("Last name should be between 1 and 15 symbols");
-        return false;
-    }
+}
 
-
+function validate(regex, value, errorId, message) {
+    if (!regex.test(value)) {
+        document.getElementById(errorId).innerHTML = message;
+        return;
+    }
+    document.getElementById(errorId).innerHTML = "";
 }
