@@ -8,29 +8,29 @@
 </head>
 <body>
 <div class="form">
-    <form id="myForm" onsubmit="return validator(document.forms.myForm)">
+    <form id="myForm" onsubmit="return validateUserRegistrationForm(document.forms.myForm)">
         <fieldset class="inner">
             First name<br>
-            <input type="text" name="firstname"><br>
-            <p class="error" id="firstname_alert"></p>
+            <input type="text" name="firstName"><br>
+            <p class="error" id="firstNameAlert"></p>
             Last name<br>
             <input type="text" name="lastname"><br>
-            <p class="error" id="lastname_alert"></p>
+            <p class="error" id="lastNameAlert"></p>
             EGN<br>
             <input type="text" name="egn"><br>
-            <p class="error" id="egn_alert"></p>
+            <p class="error" id="egnAlert"></p>
             Age<br>
             <input type="text" name="age"><br>
-            <p class="error" id="age_alert"></p>
+            <p class="error" id="ageAlert"></p>
             Address<br>
             <input type="text" name="address"><br>
-            <p class="error" id="address_alert"></p>
+            <p class="error" id="addressAlert"></p>
             Password<br>
             <input type="password" name="password"><br>
-            <p class="error" id="password_alert"></p>
+            <p class="error" id="passwordAlert"></p>
             Confirm password<br>
-            <input type="password" name="passconfirm"><br><br>
-            <p class="error" id="passconf_alert"></p>
+            <input type="password" name="passConfirm"><br><br>
+            <p class="error" id="passConfAlert"></p>
             <input type="submit" value="Submit">
         </fieldset>
     </form>
