@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Form</title>
+</head>
+<body>
+<div class="form">
+    <form id="myForm" onsubmit="return validateUserRegistrationForm(document.forms.myForm)">
+        <fieldset class="inner">
+            First name<br>
+            <input type="text" name="firstName"><br>
+            <p class="error" id="firstNameAlert"></p>
+            Last name<br>
+            <input type="text" name="lastname"><br>
+            <p class="error" id="lastNameAlert"></p>
+            EGN<br>
+            <input type="text" name="egn"><br>
+            <p class="error" id="egnAlert"></p>
+            Age<br>
+            <input type="text" name="age"><br>
+            <p class="error" id="ageAlert"></p>
+            Address<br>
+            <input type="text" name="address"><br>
+            <p class="error" id="addressAlert"></p>
+            Password<br>
+            <input type="password" name="password"><br>
+            <p class="error" id="passwordAlert"></p>
+            Confirm password<br>
+            <input type="password" name="passConfirm"><br><br>
+            <p class="error" id="passConfAlert"></p>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

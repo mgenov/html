@@ -1,0 +1,19 @@
+.form {
+    margin: auto;
+    width: 25%;
+    border: 3px solid;
+    padding: 10px;
+    text-align: center;
+    background: #6792c4;
+    border-radius: 20px;
+}
+
+.inner {
+    background: #c5fffd;
+    border-radius: 20px;
+}
+
+.error {
+    color: #c42820;
+    font-size: 12px;
+}
