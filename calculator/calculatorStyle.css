@@ -1,0 +1,38 @@
+div.calculator {
+	background-color: lightblue;
+	position: relative;
+	width: 250px;
+	height: 350px;
+	border: solid black;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+div.keypad {
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+
+input {
+	text-align: right;
+	width: 70%;
+	height: 7%; 
+	margin-top: 20px;
+	margin-left: 35px;
+	border-style: inset;
+	border-color: black;
+}
+
+button {
+	width: 40px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+button.largebutton {
+	position: absolute;
+	width: 40px;
+	height: 90px;
+}
