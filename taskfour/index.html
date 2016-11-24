@@ -2,43 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
 <div class="container ">
 
     <div class="row">
-        <input class="col-md-4 " type="text" id="screen"  readonly><br>
+        <input class="screen" type="text" id="screen"  readonly><br>
     </div>
     <div class="row">
-        <button class="col-md-1 btn-warning" id="clean" type="button" onclick="clean('screen')">C</button>
-        <button class="col-md-1 btn-warning" id="return" type="button" onclick="clearLast('screen')">R</button>
-        <button class="col-md-1 btn-success" id="divide" type="button" onclick="append('screen', '/')">&divide</button>
+        <button class="button-clear" id="clean" type="button" onclick="cleanDisplay('screen')">C</button>
+        <button class="button-clear" id="return" type="button" onclick="clearLastChar('screen')">R</button>
+        <button class="button" id="divide" type="button" onclick="appendOperand('screen', '/')">&divide</button>
     </div>
     <div class="row">
-        <button class="col-md-1 btn-info" id="seven" type="button" onclick="append('screen', '7')">7</button>
-        <button class="col-md-1 btn-info" id="eight" type="button" onclick="append('screen', '8')">8</button>
-        <button class="col-md-1 btn-info" id="nine" type="button" onclick="append('screen', '9')">9</button>
-        <button class="col-md-1 btn-success" id="multi" type="button" onclick="append('screen', '*')">&times</button>
+        <button class="button" id="seven" type="button" onclick="appendDigit('screen', '7')">7</button>
+        <button class="button" id="eight" type="button" onclick="appendDigit('screen', '8')">8</button>
+        <button class="button" id="nine" type="button" onclick="appendDigit('screen', '9')">9</button>
+        <button class="button" id="multi" type="button" onclick="appendOperand('screen', '*')">&times</button>
     </div>
     <div class="row">
-        <button class="col-md-1 btn-info" id="four" type="button" onclick="append('screen', '4')">4</button>
-        <button class="col-md-1 btn-info" id="five" type="button" onclick="append('screen', '5')">5</button>
-        <button class="col-md-1 btn-info" id="six" type="button" onclick="append('screen', '6')">6</button>
-        <button class="col-md-1 btn-success" id="subst" type="button" onclick="append('screen', '-')">-</button>
+        <button class="button" id="four" type="button" onclick="appendDigit('screen', '4')">4</button>
+        <button class="button" id="five" type="button" onclick="appendDigit('screen', '5')">5</button>
+        <button class="button" id="six" type="button" onclick="appendDigit('screen', '6')">6</button>
+        <button class="button" id="subst" type="button" onclick="appendOperand('screen', '-')">-</button>
     </div>
     <div class="row">
-        <button class="col-md-1 btn-info" id="1" type="button" onclick="append('screen', '1')">1</button>
-        <button class="col-md-1 btn-info" id="two" type="button" onclick="append('screen', '2')">2</button>
-        <button class="col-md-1 btn-info" id="three" type="button" onclick="append('screen', '3')">3</button>
-        <button class="col-md-1 btn-success" id="add" type="button" onclick="append('screen', '+')">+</button>
+        <button class="button" id="1" type="button" onclick="appendDigit('screen', '1')">1</button>
+        <button class="button" id="two" type="button" onclick="appendDigit('screen', '2')">2</button>
+        <button class="button" id="three" type="button" onclick="appendDigit('screen', '3')">3</button>
+        <button class="button" id="add" type="button" onclick="appendOperand('screen', '+')">+</button>
     </div>
     <div class="row">
-        <button class="col-md-1 btn-info" id="zero" type="button" onclick="append('screen', '0')" >0</button>
-        <button class="col-md-1 btn-success" id="dot" type="button" onclick="append('screen', '.')">.</button>
-        <button class="col-md-2 btn-primary" id="equal" type="button" onclick="calculate('screen')">=</button>
+        <button class="button" id="zero" type="button" onclick="appendDigit('screen', '0')" >0</button>
+        <button class="button" id="dot" type="button" onclick="appendDot('screen')">.</button>
+        <button class="button-equal" id="equal" type="button" onclick="calculateExpression('screen')">=</button>
     </div>
     </div>
     <script src="script.js"></script>
