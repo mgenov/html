@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="calculatorFunctions.js"></script>
+<link rel="stylesheet" type="text/css" href="calculatorStyle.css">
+</head>
+<body>
+<div id="calculator" class="calculator">
+	<input id="display" type="text" readonly>
+	<div id="keypad" class="keypad">
+		<button id="CE" onclick="clearDisplay(display)">CE</button>
+		<button id="C"  onclick="clearLast(display)">C</button>
+		<button id="/"  onclick="addOperand('/',display)">/</button>
+		<button id="*"  onclick="addOperand('*',display)">*</button>
+		<br>
+		<button id="7" onclick="enterValue(7,display)">7</button>
+		<button id="8" onclick="enterValue(8,display)">8</button>
+		<button id="9" onclick="enterValue(9,display)">9</button>
+		<br>
+		<button id="4" onclick="enterValue(4,display)">4</button>
+		<button id="5" onclick="enterValue(5,display)">5</button>
+		<button id="6" onclick="enterValue(6,display)">6</button>
+		<br>
+		<button id="1" onclick="enterValue(1,display)">1</button>
+		<button id="2" onclick="enterValue(2,display)">2</button>
+		<button id="3" onclick="enterValue(3,display)">3</button>
+		<br>
+		<button id="0" onclick="enterValue(0,display)">0</button>
+		<button id="." onclick="setDot(display)">.</button>
+		<button id="=" onclick="getSum(display)">=</button>
+	</div>
+	<button class="largebutton" onclick="addOperand('-',display)" style="right: 15px; bottom: 115px">-</button>
+	<button class="largebutton" onclick="addOperand('+',display)" style="right: 15px; bottom: 15px">+</button>
+</div>
+</body>
+</html>

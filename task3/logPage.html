@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="logPageScript.js"></script>
+</head>	
+<body>
+<form id="form1">
+	First name:<br>
+	<input id="fname" type="text" name="fname" maxlength="15">
+	<span id="fnameError" style="color: red"></span><br>
+	Last name:<br>
+	<input id="lname" type="text" name="lname" maxlength="15">
+	<span id="lnameError" style="color: red"></span><br>
+	ID:<br>
+	<input id="egn" type="text" name="egn" maxlength="10">
+	<span id="egnError" style="color: red"></span><br>
+	Age:<br>
+	<input id="age" type="text" name="age" maxlength="3">
+	<span id="ageError" style="color: red"></span><br>
+	Address:<br>
+	<input id="adres" type="text" name="adres" maxlength="100">
+	<span id="adresError" style="color: red"></span><br>
+	Password:<br>
+	<input id="pass" type="password" name="pass" maxlength="18">
+	<span id="passError" style="color: red"></span><br>
+	Confirm Password:<br>
+	<input id="confirmpass" type="password" name="confirmpass">
+	<span id="confirmpassError" style="color: red"></span><br>
+    <input type="button" onclick="validateUserForm(document.getElementById('form1'))" value="Submit">
+</form>
+</body>
+</html>
