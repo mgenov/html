@@ -7,7 +7,7 @@
 <body>
     <div>
         <input type="text" id="input">
-        <button type="button" onclick="return validateCustomNumber(document.getElementById('input').value, 'errorMsg')">Validate</button><br>
+        <button type="button" onclick="validateCustomNumber(document.getElementById('input').value, document.getElementById('errorMsg'))">Validate</button><br>
         <span id="errorMsg"></span>
     </div>
     <script type="text/javascript" src="script.js"></script>
