@@ -1,0 +1,33 @@
+h1 {
+    margin-left: 50px;
+}
+
+form li {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+form ul li label {
+    float: left;
+    clear: left;
+    width: 100px;
+    text-allign: left;
+    margin-right: 50px;
+    font-family: Times New Roman;
+}
+
+form ul li input, select, span {
+    float: left;
+    margin-bottom: 50px;
+}
+
+[type="submit"] {
+    clear: left;
+    margin: 20px 0 0 200px;
+    font-size: 16px;
+}
+
+p {
+    margin-left: 100px;
+    font-weight: bold;
+}

@@ -18,6 +18,13 @@ out/
 .idea/vcs.xml
 .idea/misc.xml
 .idea/jsLibraryMappings.xml
+*.gradle/
+*.idea/
+*build.gradle
+*gradle/
+*gradlew
+*gradlew.bat
+*settings.gradle
 
 # File-based project format:
 *.iws
